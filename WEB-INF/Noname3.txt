@@ -1,0 +1,108 @@
+<%@ include file="loginCheck.jsp" %>
+<%@ include file="db.jsp" %>
+<%@ page import="java.io.*,java.sql.*" %>
+<fieldset><legend>Up Load Data for Registrations</legend>
+<%
+		String bstr="",exam="",msg="",bc="",ap="",db="",saveFile="",ret="",cc="",monthYear="",course="";
+		boolean err = false;
+		
+		String contentType = request.getContentType();
+        //here we are checking the content type is not equal to Null and as well as the passed data from mulitpart/form-data is greater than or equal to 0
+		java.util.Date now= new java.util.Date();
+		String suffix = ""+session.getAttribute("who")+"_"+now.getDay()+"_"+(now.getMonth()+1)+"_"+(now.getYear()+1900);
+		suffix+= "_"+now.getHours()+"_"+now.getMinutes()+"_"+now.getSeconds()+"";
+        if ((contentType != null) && (contentType.indexOf("multipart/form-data") >= 0))
+		{
+			try
+			{
+                DataInputStream in = new DataInputStream(request.getInputStream());
+				String path="C:/Uploads/";
+                //we are taking the length of Content type data
+                int formDataLength = request.getContentLength();
+				//if(formDataLength<=16777216)
+				//{
+					byte dataBytes[] = new byte[formDataLength];
+					int byteRead = 0;
+					int totalBytesRead = 0;
+					//this loop converting the uploaded file into byte code
+					while (totalBytesRead < formDataLength)
+					{
+							byteRead = in.read(dataBytes, totalBytesRead, formDataLength);
+							totalBytesRead += byteRead;
+					}
+					String file = new String(dataBytes);
+					//for saving the file name
+					saveFile = file.substring(file.indexOf("filename=\"") + 10);
+					saveFile = saveFile.substring(0, saveFile.indexOf("\n"));
+					saveFile = saveFile.substring(saveFile.lastIndexOf("\\") + 1,saveFile.indexOf("\""));
+					String original=saveFile;
+					String ext = saveFile.substring(saveFile.lastIndexOf(".")+1);
+					String fName = saveFile.substring(0,saveFile.lastIndexOf("."));
+					saveFile = fName+"_"+suffix+"."+ext;
+					//out.println(ext);
+					if(ext.equalsIgnoreCase("sql"))
+					{
+						
+						int lastIndex = contentType.lastIndexOf("=");
+						String boundary = contentType.substring(lastIndex + 1,contentType.length());
+						int pos;
+						//extracting the index of file 
+						pos = file.indexOf("filename=\"");
+						pos = file.indexOf("\n", pos) + 1;
+						pos = file.indexOf("\n", pos) + 1;
+						pos = file.indexOf("\n", pos) + 1;
+						int boundaryLocation = file.indexOf(boundary, pos) - 4;
+						int startPos = ((file.substring(0, pos)).getBytes()).length;
+						int endPos = ((file.substring(0, boundaryLocation)).getBytes()).length;
+						// creating a new file with the same name and writing the content in new file
+						
+						
+						
+						File nf = new File(path+saveFile);
+						if(!nf.exists())
+						{
+							nf.createNewFile();
+						}
+						FileOutputStream fileOut = new FileOutputStream(nf);
+						fileOut.write(dataBytes, startPos, (endPos - startPos));
+						fileOut.flush();
+						fileOut.close();
+						
+						String executeCmd = "cmd /C mysql -u "+userDB+" -p"+passwordDB+" < "+path+"/"+saveFile;
+						//out.println(executeCmd);
+						try
+						{
+							//out.println(executeCmd);
+							Runtime.getRuntime().exec(executeCmd);
+							msg="DATA BASE UPLOADED SUCCESSFULLY.<BR> START REGISTRATIONS.";
+						}
+						catch(Exception ex)
+						{
+							out.println("ERROR IN CREATING DATABASE : "+ex.getMessage()+"<br>"+executeCmd);
+						}
+					}
+					else
+					{
+						out.println("<p class='err'>You must upload SQL Files only ");
+					}
+				/*}
+				else
+				{
+					out.println("File Size Too Large Greater Than 10 MB : "+ ((long)formDataLength/(8*1024*1024)) +" MB");
+				}*/
+			}
+			catch(Exception ex)
+			{
+				out.println(saveFile+""+ex);
+			}
+		
+		// con.close();
+	}
+%>
+
+<% if(err){%>
+<p class="err"><%=msg%></p>
+<% } else {%>
+<p class="suc"><%=msg%></p>
+<% }%>
+</fieldset>

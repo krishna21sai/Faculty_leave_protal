@@ -1,0 +1,6 @@
+delete from examreports where testid in (select testid from scheduling where coursecode='B')
+delete from studentquestions where testid in (select testid from scheduling where coursecode='B')
+delete from optionstab where testid in (select testid from scheduling where coursecode='B')
+delete from optionstable where testid in (select testid from scheduling where coursecode='B')
+delete from stdtest where testid in (select testid from scheduling where coursecode='B')
+delete from stdtimes where testid in (select testid from scheduling where coursecode='B')

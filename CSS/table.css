@@ -1,0 +1,11 @@
+#table	{border-collapse: collapse;}
+#table td,#table th	{font-size:9pt; font-family: Verdana;text-transform: uppercase;}
+.table
+{
+	border-collapse:collapse;
+	width:80%;
+}
+h1,h3
+{
+font-family: Verdana;
+}

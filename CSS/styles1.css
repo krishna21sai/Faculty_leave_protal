@@ -1,0 +1,18 @@
+body{margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; color:#666666; font-size:12px; background:#8989ba}
+div, h1, h2, h3, p, form, label, input, textarea, img, span, ul{margin:0; padding:0;}
+.container{width:100%; float:left; text-align:center; background: #FFF; padding-top:20px; padding-bottom:20px;}
+.grey-text{font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#666666; font-weight:bold; text-align:center; padding: 10px 0 10px 0;}
+.purple-bg{background:url(../Images/vilot-bg-img.jpg) left top repeat-x; text-align:center; width:100%; float:left; padding: 29px 0 29px 0; text-align:center;}
+.box-cont{width:370px; margin: 0 auto; overflow:hidden;}
+.box{width:370px; }
+.box-top{width:370px;}
+.box-mid{width:350px;background:url(../Images/box-border.gif) left top repeat-y; padding: 5px 5px 5px 5px; margin-left: 10px;}
+.box-botom{width:350px;margin-left: 10px;}
+.box2{width:370px; }
+.form-text{font-family:Arial, Helvetica, sans-serif; color:#666666; font-size:12px;}
+.text-box{font-family:Arial, Helvetica, sans-serif; color:#666666; font-size:12px; width: 150px;}
+.forgot{font-family:Arial, Helvetica, sans-serif; color:#666666; font-size:12px; text-decoration: underline;}
+.forgot:hover{font-family:Arial, Helvetica, sans-serif; color:#CCCCCC; font-size:12px; text-decoration:none;}
+.btn{width:361px; float:left; margin-bottom:5px;}
+
+

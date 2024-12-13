@@ -40,29 +40,29 @@ The image displays the HOD Approval of Faculty Leave Page, which is a Work Adjus
 ![image](https://github.com/user-attachments/assets/4de41e4f-effc-4812-bc3e-9243951ca591)
 
 ............................................................................HOD Leave Application Flow.........................................................................................
-![image](https://github.com/user-attachments/assets/03b79ad1-f946-4c9e-a578-03a3c77fa812)
+![image](https://github.com/user-attachments/assets/35002cbe-7915-480e-b0d5-6364b10606f9)
 
 HOD Leave Application
 
 The image displays a Leave Entry Form for an employee, who is the Head of the Department. The form includes fields for date, employee code, name, designation, department, leave period (from and to dates), leave type (e.g., casual leave), and leave balance. The form automatically calculates the number of leave days applied and updates the remaining balance. The user can also enter the purpose of the leave in a designated text box. After filling in all required information, the form can be submitted. After Submitting the work adjustment will visible
 
-![image](https://github.com/user-attachments/assets/da5713cd-1ee4-433a-a090-69671d7f979c)
+![image](https://github.com/user-attachments/assets/dca0cec0-b51c-4c6b-b6c5-8f41e766731e)
 
 HOD Work Adjustment:
 
 The image shows a Work Adjustment and Allocation Form designed for department heads to manage class adjustments and delegate responsibilities during their absence. The Faculty Adjustment section displays any classes that need coverage, although in this instance, no classes are listed as requiring adjustments. Below, the Work Allocation section allows the department head to assign another faculty member to take over specific responsibilities or roles temporarily. A dropdown menu provides a list of available faculty members for selection. Once the allocation is finalized, it can be submitted. The right sidebar contains links to personal leave information, service requests, and department leave-related resources for additional support.
 
 
-![image](https://github.com/user-attachments/assets/1ded9d45-aec5-42a1-b326-307907247943)
+![image](https://github.com/user-attachments/assets/7476b276-5b8d-487d-a10b-984aee522c58)
 
 Dean approval of HOD leave:
 
 The image shows a Dean Approval of HOD Leave Form that allows the dean to review and approve leave requests submitted by department heads. The form includes a table with key details such as employee code, name, leave period, leave type, leave balance, and adjustments. In the "adjustments" column, the role and the designated faculty member assigned to cover duties during the HOD’s absence are specified. The dean can choose to "Accept" or "Deny" the leave request and any adjustments, ensuring responsibilities are covered. Once the decision is finalized, the form can be submitted. The right sidebar provides links to relevant resources and reports for leave management and service requests.
 
-![image](https://github.com/user-attachments/assets/81feabc3-3a8a-48a0-baff-fe7632a8e3ac)
+![image](https://github.com/user-attachments/assets/c9212e34-9b71-4b68-b86b-862b46bec7e5)
 
 VC approval of HOD leave:
 The image displays a Vice Chancellor (VC) Approval of HOD Leave Form that facilitates the review and approval of leave requests submitted by Heads of Departments (HODs). The form includes a table with essential information such as employee code, name, leave dates, type of leave, current leave balance, and any adjustments made to cover responsibilities during the leave period. In the "adjustments" column, the designated substitute faculty member is specified. The VC has the option to "Accept" or "Deny" the leave request by selecting the appropriate checkbox. After making a decision, the VC can submit the form. The sidebar on the right provides quick links to additional resources, such as leave status, variance reports, and university-related links.
 
-![image](https://github.com/user-attachments/assets/b400a669-d1e7-4896-9640-46badac283eb)
+![image](https://github.com/user-attachments/assets/5af89f89-cbce-4db3-a64c-86115188d5ed)
 
